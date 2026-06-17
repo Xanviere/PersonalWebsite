@@ -2,11 +2,12 @@ import React, { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 
-export default function AnimatedBackground() {
+export default function AnimatedBackground({ theme }) {
   const particlesInit = useCallback(async engine => {
-    // Loads the slim version which contains the basic network/node features
     await loadSlim(engine);
   }, []);
+
+  const color = theme === 'dark' ? '#ffffff' : '#000000';
 
   return (
     <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: -2, pointerEvents: 'none' }}>
@@ -14,66 +15,38 @@ export default function AnimatedBackground() {
         id="tsparticles"
         init={particlesInit}
         options={{
-          background: {
-            color: {
-              value: "transparent",
-            },
-          },
+          background: { color: { value: "transparent" } },
           fpsLimit: 60,
           interactivity: {
             events: {
-              onHover: {
-                enable: true,
-                mode: "grab", // Grabs nearby nodes when mouse moves
-              },
+              onHover: { enable: true, mode: "grab" },
               resize: true,
             },
             modes: {
-              grab: {
-                distance: 140,
-                links: {
-                  opacity: 0.15,
-                },
-              },
+              grab: { distance: 140, links: { opacity: theme === 'dark' ? 0.3 : 0.15 } },
             },
           },
           particles: {
-            color: {
-              value: "#000000",
-            },
+            color: { value: color },
             links: {
-              color: "#000000",
+              color: color,
               distance: 150,
               enable: true,
-              opacity: 0.04,
+              opacity: theme === 'dark' ? 0.1 : 0.04,
               width: 1,
             },
             move: {
               direction: "none",
               enable: true,
-              outModes: {
-                default: "bounce",
-              },
+              outModes: { default: "bounce" },
               random: false,
               speed: 0.4,
               straight: false,
             },
-            number: {
-              density: {
-                enable: true,
-                area: 800,
-              },
-              value: 60,
-            },
-            opacity: {
-              value: 0.1,
-            },
-            shape: {
-              type: "circle",
-            },
-            size: {
-              value: { min: 1, max: 2 },
-            },
+            number: { density: { enable: true, area: 800 }, value: 60 },
+            opacity: { value: theme === 'dark' ? 0.2 : 0.1 },
+            shape: { type: "circle" },
+            size: { value: { min: 1, max: 2 } },
           },
           detectRetina: true,
         }}
