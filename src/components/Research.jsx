@@ -4,7 +4,7 @@ import { research } from '../data';
 export default function Research() {
   if (!research || research.length === 0) return null;
   return (
-    <section id="research" className="section">
+    <section id="research" className="section slide-up">
       <div className="container">
         <h2 className="section-title">Research</h2>
         <div className="card-list">

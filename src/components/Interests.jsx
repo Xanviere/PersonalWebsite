@@ -4,7 +4,7 @@ import { interests } from '../data';
 export default function Interests() {
   if (!interests || interests.length === 0) return null;
   return (
-    <section id="interests" className="section">
+    <section id="interests" className="section slide-up">
       <div className="container">
         <h2 className="section-title">Research Interests</h2>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>

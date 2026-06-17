@@ -4,7 +4,7 @@ import { achievements } from '../data';
 export default function Achievements() {
   if (!achievements || achievements.length === 0) return null;
   return (
-    <section id="achievements" className="section">
+    <section id="achievements" className="section slide-up">
       <div className="container">
         <h2 className="section-title">Achievements</h2>
         <div className="achievements-timeline">

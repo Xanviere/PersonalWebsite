@@ -3,7 +3,7 @@ import { personalInfo } from '../data';
 
 export default function Hero() {
   return (
-    <section id="about" className="section hero">
+    <section id="about" className="section hero slide-up">
       <div className="container hero-container">
         <div className="hero-content">
           <h1 className="hero-title">Hi, I'm {personalInfo.name}.</h1>

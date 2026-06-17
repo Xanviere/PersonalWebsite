@@ -13,7 +13,8 @@ export const education = [
     degree: "B.Tech. in Computer Science and Engineering (Bioinformatics)",
     institution: "Vellore Institute of Technology",
     duration: "2023 - 2027",
-    details: "Focusing on advanced coursework. Current GPA: 9.1/10. Relevant coursework includes Advanced Research Methods, Statistical Analysis, and Capstone Seminar."
+    gpa: "9.1/10",
+    details: "Focusing on advanced coursework including Advanced Research Methods, Statistical Analysis, and Capstone Seminar."
   }
 ];
 
@@ -33,7 +34,7 @@ export const research = [
     duration: "Winter 2026",
     pi: "Dr. Selvi M",
     description: "Designed a system using LinUCB Algorithm for encryption algorithm selection in a constrained IoT environment.",
-    status: "Submitted",
+    status: "Submitted to INDISCON 2026",
     link: "#"
   }
 ];
@@ -52,12 +53,5 @@ export const achievements = [
     organization: "Vellore Institute of Technology",
     year: "2025 - 2026",
     description: "Awarded for ranking 6th of the academic cohort."
-  },
-  {
-    id: 2,
-    title: "Best Undergraduate Poster",
-    organization: "National Science Symposium",
-    year: "2023",
-    description: "Recognized for outstanding visual communication and clarity of research findings."
   }
 ];

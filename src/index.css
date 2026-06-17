@@ -1,18 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
 
 :root {
-  /* Tinted black instead of pure black */
-  --bg: #09090b;
-  --bg-card: #121214;
-  --border: #27272a;
-  --border-hover: #3f3f46;
-  --text-main: #f4f4f5;
-  --text-muted: #a1a1aa;
-  --accent: #d4d4d8;
-  --accent-highlight: #ffffff;
-  /* Swapped Inter for Outfit to add character and follow impeccable guidelines */
+  /* High-end sophisticated light theme */
+  --bg: #fdfdfc;
+  --bg-card: #ffffff;
+  --border: #e4e4e7;
+  --border-hover: #d4d4d8;
+  --text-main: #18181b;
+  --text-muted: #52525b;
+  
+  /* Accent for badges/buttons */
+  --accent: #f1f5f9;
+  --accent-text: #0f172a;
+  --accent-highlight: #3b82f6;
+
   --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 * {
@@ -32,6 +35,7 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: relative;
 }
 
 ::selection {
@@ -49,21 +53,99 @@ a:hover {
   color: var(--accent-highlight);
 }
 
+/* Ambient Animated Background */
+.ambient-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.5;
+  animation: float 20s infinite ease-in-out;
+}
+
+.blob-1 {
+  top: -10%;
+  left: -10%;
+  width: 500px;
+  height: 500px;
+  background: rgba(59, 130, 246, 0.15); /* Soft blue */
+  animation-delay: 0s;
+}
+
+.blob-2 {
+  bottom: -20%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: rgba(168, 85, 247, 0.1); /* Soft purple */
+  animation-delay: -5s;
+}
+
+.blob-3 {
+  top: 40%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  background: rgba(16, 185, 129, 0.08); /* Soft emerald */
+  animation-delay: -10s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+}
+
+/* Enter Animations */
+.slide-up {
+  opacity: 0;
+  animation: slideUpFade 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero { animation-delay: 0.1s; }
+#education { animation-delay: 0.2s; }
+#research { animation-delay: 0.3s; }
+#achievements { animation-delay: 0.4s; }
+#interests { animation-delay: 0.5s; }
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .container {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
   padding: 0 1.5rem;
+  position: relative;
+  z-index: 1;
 }
 
 /* Header */
 .header {
   position: sticky;
   top: 0;
-  background: rgba(9, 9, 11, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
+  background: rgba(253, 253, 252, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(228, 228, 231, 0.5);
   z-index: 100;
 }
 
@@ -164,17 +246,20 @@ a:hover {
   background-color: transparent;
   color: var(--text-main);
   transform: translateY(-2px);
+  box-shadow: 0 10px 20px -10px rgba(0,0,0,0.15);
 }
 
 .btn-secondary {
-  background-color: transparent;
+  background-color: var(--bg-card);
   color: var(--text-main);
   border: 1px solid var(--border);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 }
 
 .btn-secondary:hover {
-  border-color: var(--text-main);
+  border-color: var(--border-hover);
   transform: translateY(-2px);
+  box-shadow: 0 10px 20px -10px rgba(0,0,0,0.1);
 }
 
 /* Minimal Cards */
@@ -185,35 +270,22 @@ a:hover {
 }
 
 .minimal-card {
-  background: var(--bg-card);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 1.5rem;
+  border-radius: 16px;
+  padding: 1.75rem;
   transition: var(--transition);
   position: relative;
   overflow: hidden;
-}
-
-.minimal-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--text-main);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.4s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.01);
 }
 
 .minimal-card:hover {
   border-color: var(--border-hover);
-  transform: translateY(-2px);
-}
-
-.minimal-card:hover::before {
-  transform: scaleX(1);
+  transform: translateY(-3px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
 }
 
 .card-header {
@@ -254,13 +326,14 @@ a:hover {
   padding: 0.25rem 0.75rem;
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 6px;
+  border-radius: 8px;
   transition: var(--transition);
 }
 
 .pi-tag:hover {
   border-color: var(--border-hover);
-  transform: scale(1.05);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
 }
 
 /* Achievements Timeline */
@@ -295,14 +368,15 @@ a:hover {
   height: 12px;
   border-radius: 50%;
   background: var(--bg);
-  border: 2px solid var(--text-main);
+  border: 2px solid var(--text-muted);
   z-index: 1;
   transition: var(--transition);
 }
 
 .timeline-item:hover .timeline-dot {
-  background: var(--text-main);
-  transform: scale(1.2);
+  background: var(--accent-highlight);
+  border-color: var(--accent-highlight);
+  transform: scale(1.3);
 }
 
 .timeline-line {
@@ -315,7 +389,7 @@ a:hover {
 
 .timeline-content {
   flex: 1;
-  margin-top: -0.5rem; /* Align top of card with dot */
+  margin-top: -0.5rem;
 }
 
 /* Footer */

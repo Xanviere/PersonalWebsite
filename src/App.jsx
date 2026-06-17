@@ -9,17 +9,26 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="app-container">
-      <Header />
-      <main>
-        <Hero />
-        <Education />
-        <Research />
-        <Achievements />
-        <Interests />
-      </main>
-      <Footer />
-    </div>
+    <>
+      {/* Ambient animated background */}
+      <div className="ambient-bg">
+        <div className="blob blob-1"></div>
+        <div className="blob blob-2"></div>
+        <div className="blob blob-3"></div>
+      </div>
+      
+      <div className="app-container">
+        <Header />
+        <main>
+          <Hero />
+          <Education />
+          <Research />
+          <Achievements />
+          <Interests />
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 }
 
