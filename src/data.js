@@ -43,3 +43,27 @@ export const interests = [
   "Data Science",
   "Computational Biology"
 ];
+
+export const achievements = [
+  {
+    id: 1,
+    title: "Dean's List",
+    organization: "University Name",
+    year: "2023 - 2024",
+    description: "Awarded for maintaining a GPA in the top 5% of the academic cohort."
+  },
+  {
+    id: 2,
+    title: "Best Undergraduate Poster",
+    organization: "National Science Symposium",
+    year: "2023",
+    description: "Recognized for outstanding visual communication and clarity of research findings."
+  },
+  {
+    id: 3,
+    title: "Research Grant Scholarship",
+    organization: "Department of Sciences",
+    year: "2022",
+    description: "Awarded $5,000 to fund independent summer research on cognitive models."
+  }
+];

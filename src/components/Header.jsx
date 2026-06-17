@@ -10,6 +10,7 @@ export default function Header() {
           <a href="#about">About</a>
           <a href="#education">Education</a>
           <a href="#research">Research</a>
+          <a href="#achievements">Achievements</a>
           <a href="#interests">Interests</a>
         </nav>
       </div>
