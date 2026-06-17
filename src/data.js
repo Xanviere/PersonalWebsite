@@ -4,7 +4,7 @@ export const personalInfo = {
   about: "I am a Bachelor's student deeply curious about the underlying mechanics of our world. My academic focus lies at the intersection of theoretical research and practical application. I am actively seeking opportunities to contribute to impactful lab research and pursue graduate studies.",
   email: "utkarsh.srivastava2023@vitstudent.ac.in",
   linkedin: "https://www.linkedin.com/in/utkarsh-srivastava-0a88a6219/",
-  cv: "/path-to-your-cv.pdf"
+  cv: "/resume.pdf"
 };
 
 export const education = [
@@ -20,17 +20,21 @@ export const education = [
 export const research = [
   {
     id: 1,
-    topic: "Theoretical and Applied Research",
+    topic: "On Non-Stationary Multi-Armed Bandits",
     duration: "Fall 2025 - Present",
     pi: "Dr. Ashish R. Hota",
-    description: "Assisting in the design and execution of experiments. Responsible for literature reviews, participant recruitment, and preliminary data analysis using statistical tools."
+    description: "Working on linear stochastic constrained bandit problems with unknown non-stationarity.",
+    status: "In Progress",
+    link: "#"
   },
   {
     id: 2,
-    topic: "Independent Literature Review",
-    duration: "Spring 2023",
-    pi: "Dr. John Doe",
-    description: "Conducted an independent review of recent literature on [Topic]. Synthesized findings into a comprehensive 30-page review paper."
+    topic: "Adaptive Security Selection in Resource-Constrained IoT Systems",
+    duration: "Winter 2026",
+    pi: "Dr. Selvi M",
+    description: "Designed a system using LinUCB Algorithm for encryption algorithm selection in a constrained IoT environment.",
+    status: "Submitted",
+    link: "#"
   }
 ];
 
