@@ -7,15 +7,16 @@ import Achievements from './components/Achievements';
 import Interests from './components/Interests';
 import Footer from './components/Footer';
 
+import AnimatedBackground from './components/AnimatedBackground';
+
 function App() {
   return (
     <>
-      {/* Ambient animated background */}
-      <div className="ambient-bg">
-        <div className="blob blob-1"></div>
-        <div className="blob blob-2"></div>
-        <div className="blob blob-3"></div>
-      </div>
+      {/* Mathematical Network Graph Background */}
+      <AnimatedBackground />
+      
+      {/* Architectural Grid Overlay */}
+      <div className="grid-overlay"></div>
       
       <div className="app-container">
         <Header />
