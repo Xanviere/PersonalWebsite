@@ -44,7 +44,7 @@ export default function SpotlightCard({ children, className = '' }) {
         overflow: 'hidden',
         borderRadius: '16px',
         border: '1px solid var(--border)',
-        background: 'rgba(255, 255, 255, 0.5)',
+        background: 'var(--bg-card)',
         backdropFilter: 'blur(12px)',
         WebkitBackdropFilter: 'blur(12px)',
         transition: 'border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
@@ -54,7 +54,7 @@ export default function SpotlightCard({ children, className = '' }) {
         className="pointer-events-none absolute -inset-px opacity-0 transition duration-300"
         style={{
           opacity,
-          background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(0,0,0,0.03), transparent 40%)`,
+          background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, var(--accent), transparent 40%)`,
           pointerEvents: 'none',
           position: 'absolute',
           inset: '-1px',

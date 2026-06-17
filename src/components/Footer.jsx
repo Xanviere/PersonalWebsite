@@ -10,7 +10,7 @@ export default function Footer() {
           <a href={personalInfo.email.startsWith('mailto:') ? personalInfo.email : `mailto:${personalInfo.email}`}>Email</a>
         </div>
         <div className="footer-copyright">
-          &copy; {new Date().getFullYear()} {personalInfo.name}. Built with React & Vite.
+          &copy; {new Date().getFullYear()} {personalInfo.name}.
         </div>
       </div>
     </footer>
