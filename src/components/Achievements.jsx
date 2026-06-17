@@ -1,4 +1,5 @@
 import React from 'react';
+import SpotlightCard from './SpotlightCard';
 import { achievements } from '../data';
 
 export default function Achievements() {
@@ -14,14 +15,11 @@ export default function Achievements() {
                 <div className="timeline-dot"></div>
                 {index !== achievements.length - 1 && <div className="timeline-line"></div>}
               </div>
-              <div className="timeline-content minimal-card">
-                <div className="card-header">
-                  <h3 className="card-title">{item.title}</h3>
-                  <div className="card-meta">{item.year}</div>
-                </div>
-                <div className="card-subtitle">{item.organization}</div>
+              <SpotlightCard className="timeline-content">
+                <h3 className="card-title">{item.title}</h3>
+                <div className="card-subtitle" style={{ fontFamily: 'var(--font-sans)' }}>{item.organization} • {item.year}</div>
                 <p className="card-text">{item.description}</p>
-              </div>
+              </SpotlightCard>
             </div>
           ))}
         </div>
