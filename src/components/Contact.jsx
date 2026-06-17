@@ -21,19 +21,24 @@ export default function Contact() {
             </div>
           </div>
           
-          <div style={{ flex: '1 1 300px', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-             {/* Visual "Form" aesthetic without backend to match reference */}
+          <div style={{ flex: '1 1 300px', display: 'flex', flexDirection: 'column', gap: '1.5rem', justifyContent: 'center' }}>
              <div>
-                <label style={{ display: 'block', fontSize: '0.875rem', color: 'var(--text-muted)', marginBottom: '0.5rem', fontFamily: 'var(--font-sans)' }}>Email Address</label>
-                <div style={{ width: '100%', padding: '1rem', background: 'transparent', border: '1px solid var(--border)', borderRadius: '8px', color: 'var(--text-main)', fontFamily: 'var(--font-sans)' }}>
+                <span style={{ display: 'block', fontSize: '0.875rem', color: 'var(--text-muted)', marginBottom: '0.25rem', fontFamily: 'var(--font-sans)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                  Direct Contact
+                </span>
+                <a 
+                  href={personalInfo.email.startsWith('mailto:') ? personalInfo.email : `mailto:${personalInfo.email}`}
+                  style={{ 
+                    fontSize: '1.5rem', 
+                    color: 'var(--text-main)', 
+                    fontFamily: 'var(--font-serif)',
+                    fontWeight: '500',
+                    textDecoration: 'none',
+                    display: 'inline-block'
+                  }}
+                >
                   {personalInfo.email.replace('mailto:', '')}
-                </div>
-             </div>
-             <div>
-                <label style={{ display: 'block', fontSize: '0.875rem', color: 'var(--text-muted)', marginBottom: '0.5rem', fontFamily: 'var(--font-sans)' }}>Location</label>
-                <div style={{ width: '100%', padding: '1rem', background: 'transparent', border: '1px solid var(--border)', borderRadius: '8px', color: 'var(--text-main)', fontFamily: 'var(--font-sans)' }}>
-                  {personalInfo.university}
-                </div>
+                </a>
              </div>
           </div>
         </div>
