@@ -5,6 +5,7 @@ import Education from './components/Education';
 import Research from './components/Research';
 import Achievements from './components/Achievements';
 import Interests from './components/Interests';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 import AnimatedBackground from './components/AnimatedBackground';
@@ -44,6 +45,7 @@ function App() {
           <Research />
           <Achievements />
           <Interests />
+          <Contact />
         </main>
         <Footer />
       </div>

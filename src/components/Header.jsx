@@ -14,6 +14,7 @@ export default function Header({ theme, toggleTheme }) {
             <a href="#education">Education</a>
             <a href="#research">Research</a>
             <a href="#achievements">Achievements</a>
+            <a href="#contact">Contact</a>
           </nav>
           <button 
             onClick={toggleTheme} 
