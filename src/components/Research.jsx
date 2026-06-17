@@ -43,7 +43,7 @@ export default function Research() {
                     </a>
                   )}
                 </div>
-                <div className="card-meta" style={{ fontFamily: 'var(--font-sans)', fontSize: '0.875rem' }}>{edu.duration}</div>
+                <div className="card-meta" style={{ fontFamily: 'var(--font-sans)', fontSize: '0.875rem' }}>{item.duration}</div>
               </div>
               {item.pi && <div className="pi-tag" style={{marginTop: '0.5rem'}}>Under the guidance of {item.pi}</div>}
               <p className="card-text">{item.description}</p>
