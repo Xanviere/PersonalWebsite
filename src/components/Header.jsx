@@ -4,7 +4,7 @@ import { personalInfo } from '../data';
 export default function Header({ theme, toggleTheme }) {
   return (
     <header className="header">
-      <div className="container header-container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <div className="header-container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', maxWidth: '1600px', margin: '0 auto', padding: '0 4vw' }}>
         <a href="#" className="logo" style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 600, fontSize: '1.25rem' }}>
           {personalInfo.name}
         </a>
