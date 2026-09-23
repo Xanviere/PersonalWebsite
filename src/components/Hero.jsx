@@ -9,7 +9,7 @@ export default function Hero() {
           <div className="hero-status-row">
             <span className="status-live-indicator">
               <span className="pulse-dot"></span>
-              <span>Available for Research Collaborations</span>
+              <span>Prospective PhD Applicant · Seeking Graduate Research Opportunities</span>
             </span>
           </div>
 
