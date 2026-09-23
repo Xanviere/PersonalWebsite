@@ -21,21 +21,30 @@ export const education = [
 export const research = [
   {
     id: 1,
-    topic: "On Non-Stationary Multi-Armed Bandits",
+    topic: "On Non-Stationary Constrained Multi-Armed Bandits",
     duration: "Fall 2025 - Present",
     pi: "Dr. Ashish R. Hota",
-    description: "Working on linear stochastic constrained bandit problems with unknown non-stationarity.",
-    status: "In Progress",
-    link: "#"
+    description: "Investigating the constrained multi-armed bandit problem in non-stationary environments with abrupt changes in reward and constraint distributions. Proposed adaptive extensions of the Constraint Lower Confidence Bound (CLCB) algorithm (sliding-window and exponentially discounted variants) with theoretical sublinear regret bounds and real-world evaluation on clinical microbiology datasets.",
+    status: "Under Review at TMLR",
+    statusNote: "2 reviews received",
+    link: "https://openreview.net/pdf?id=Hi6Jwtya6x",
+    links: [
+      { label: "Paper (PDF)", url: "https://openreview.net/pdf?id=Hi6Jwtya6x", type: "pdf" },
+      { label: "OpenReview Forum", url: "https://openreview.net/forum?id=Hi6Jwtya6x", type: "external" }
+    ]
   },
   {
     id: 2,
-    topic: "Adaptive Security Selection in Resource-Constrained IoT Systems",
+    topic: "An Adaptive Security Selection Framework for Resource-Constrained IoT Devices Using the LinUCB Algorithm",
     duration: "Winter 2026",
     pi: "Dr. Selvi M",
-    description: "Designed a system using LinUCB Algorithm for encryption algorithm selection in a constrained IoT environment.",
-    status: "Submitted to INDISCON 2026",
-    link: "#"
+    coauthors: "Avidha Halder, Selvi M",
+    description: "Formulated adaptive cryptographic cipher selection in resource-constrained IoT devices as a contextual multi-armed bandit. Designed a hardware-efficient LinUCB policy using Sherman-Morrison matrix updates to dynamically navigate security-energy trade-offs under continuous non-stationary threat spikes and battery depletion.",
+    status: "Published at IEEE INDISCON 2026",
+    link: "/papers/adaptive-security-iot-linucb.pdf",
+    links: [
+      { label: "Paper (PDF)", url: "/papers/adaptive-security-iot-linucb.pdf", type: "pdf" }
+    ]
   }
 ];
 
