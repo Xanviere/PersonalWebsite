@@ -7,30 +7,26 @@ export default function Interests() {
   return (
     <section id="interests" className="section slide-up">
       <div className="container">
-        <h2 className="section-title">Research Interests</h2>
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
-          gap: '1rem',
-          gridAutoFlow: 'dense'
-        }}>
-          {interests.map((interest, index) => (
+        <div className="section-header-block">
+          <h2 className="section-title">Research Focus & Domains</h2>
+          <p className="section-subtitle-text">
+            Core mathematical fields and biological questions I actively investigate.
+          </p>
+        </div>
+
+        <div className="interests-grid">
+          {interests.map((item, index) => (
             <SpotlightCard 
               key={index} 
-              className="bento-item"
+              className="interest-card"
             >
-              <div style={{
-                height: '100%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                textAlign: 'center',
-                fontFamily: 'var(--font-sans)',
-                fontWeight: '500',
-                color: 'var(--text-main)',
-                minHeight: '80px'
-              }}>
-                {interest}
+              <div className="interest-card-inner">
+                <div className="interest-header">
+                  <span className="interest-number">0{index + 1}</span>
+                  <h3 className="interest-title">{item.title}</h3>
+                </div>
+                <div className="interest-subtitle">{item.subtitle}</div>
+                <p className="interest-description">{item.description}</p>
               </div>
             </SpotlightCard>
           ))}
