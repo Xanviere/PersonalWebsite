@@ -23,11 +23,11 @@ export default function Research() {
               <SpotlightCard key={item.id} className="research-card">
                 <div className="card-header">
                   <div className="card-title-group">
-                    {item.venue && (
+                    {item.status && (
                       <div className="paper-venue-tag">
                         <span className={`status-dot ${isPublished ? 'published' : isUnderReview ? 'under-review' : ''}`} />
-                        <span className="venue-name">{item.venue}</span>
-                        <span className="venue-status">({item.status})</span>
+                        <span className="venue-status">{item.status}</span>
+                        {item.statusNote && <span className="venue-note">({item.statusNote})</span>}
                       </div>
                     )}
 
@@ -45,6 +45,12 @@ export default function Research() {
                         item.topic || item.title || 'Research Project'
                       )}
                     </h3>
+
+                    {item.venue && (
+                      <div className="paper-venue-subtext">
+                        {item.venue}
+                      </div>
+                    )}
                   </div>
 
                   <div className="card-meta">
