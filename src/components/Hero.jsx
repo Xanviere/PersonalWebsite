@@ -1,5 +1,5 @@
 import React from 'react';
-import { personalInfo, highlights } from '../data';
+import { personalInfo } from '../data';
 
 export default function Hero() {
   return (
@@ -21,18 +21,6 @@ export default function Hero() {
             {personalInfo.tagline}
           </p>
 
-          {/* Quick Publication Spotlight Pills */}
-          <div className="hero-publications-preview">
-            {highlights.map((h, i) => (
-              <a key={i} href={h.link} className={`hero-pub-tag ${h.badge.toLowerCase().replace(' ', '-')}`}>
-                <span className={`hero-pub-dot ${h.badge.toLowerCase().replace(' ', '-')}`}></span>
-                <span className="hero-pub-venue">{h.venue}</span>
-                <span className="hero-pub-divider">/</span>
-                <span className="hero-pub-badge">{h.badge}</span>
-              </a>
-            ))}
-          </div>
-
           <p className="hero-about">{personalInfo.about}</p>
 
           <div className="hero-links">
@@ -40,7 +28,7 @@ export default function Hero() {
               View Publications
             </a>
             <a href={personalInfo.cv} target="_blank" rel="noreferrer" className="btn btn-secondary">
-              View Resume
+              Curriculum Vitae (PDF)
             </a>
             <a href="#contact" className="btn btn-secondary">
               Get in Touch
