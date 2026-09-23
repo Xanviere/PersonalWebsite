@@ -86,7 +86,7 @@ export default function Header({ theme, toggleTheme }) {
         <nav className="mobile-nav-links">
           <a href="#about" onClick={handleLinkClick}>About</a>
           <a href="#education" onClick={handleLinkClick}>Education</a>
-          <a href="#research" onClick={handleLinkClick}>Research & Publications</a>
+          <a href="#research" onClick={handleLinkClick}>Research</a>
           <a href="#achievements" onClick={handleLinkClick}>Achievements</a>
           <a href="#contact" onClick={handleLinkClick}>Contact</a>
         </nav>

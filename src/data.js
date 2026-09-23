@@ -58,14 +58,14 @@ export const research = [
     topic: "An Adaptive Security Selection Framework for Resource-Constrained IoT Devices Using the LinUCB Algorithm",
     duration: "Winter 2026",
     pi: "Dr. Selvi M",
-    coauthors: "Avidha Halder, Selvi M",
+    coauthors: "Avidha Halder",
     description: "Formulated adaptive cryptographic cipher selection in resource-constrained IoT devices as a contextual multi-armed bandit. Designed a hardware-efficient LinUCB policy using Sherman-Morrison matrix updates to dynamically navigate security-energy trade-offs under continuous non-stationary threat spikes and battery depletion.",
     status: "Published",
     venue: "IEEE INDISCON 2026",
     tags: ["LinUCB", "Sherman-Morrison Updates", "Edge Microcontrollers", "IoT Security"],
     link: "/papers/adaptive-security-iot-linucb.pdf",
     links: [
-      { label: "Read Paper (PDF)", url: "/papers/adaptive-security-iot-linucb.pdf", type: "pdf" }
+      { label: "Paper (PDF)", url: "/papers/adaptive-security-iot-linucb.pdf", type: "pdf" }
     ]
   }
 ];

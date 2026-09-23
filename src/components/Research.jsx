@@ -66,7 +66,7 @@ export default function Research() {
                   )}
                   {item.coauthors && (
                     <div className="pi-tag coauthor-tag">
-                      <span className="pi-label">Co-authors:</span> {item.coauthors}
+                      <span className="pi-label">{item.coauthors.includes(',') ? 'Co-authors:' : 'Co-author:'}</span> {item.coauthors}
                     </div>
                   )}
                 </div>
