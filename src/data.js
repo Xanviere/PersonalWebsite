@@ -66,7 +66,7 @@ export const research = [
     pi: "Dr. Ashish R. Hota",
     description: "Investigating the constrained multi-armed bandit problem in non-stationary environments with abrupt changes in reward and constraint distributions. Proposed adaptive extensions of the Constraint Lower Confidence Bound (CLCB) algorithm (sliding-window and exponentially discounted variants) with theoretical sublinear regret bounds and real-world evaluation on clinical microbiology datasets.",
     status: "Under Review",
-    statusNote: "2 reviews received",
+    statusNote: "3 reviews received · Rebuttals submitted",
     venue: "Transactions on Machine Learning Research (TMLR)",
     tags: ["Constrained Bandits", "Non-Stationary Environments", "Sublinear Regret Bounds"],
     link: "https://openreview.net/pdf?id=Hi6Jwtya6x",
