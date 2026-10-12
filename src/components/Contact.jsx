@@ -32,6 +32,7 @@ export default function Contact() {
           <p className="section-subtitle-text">
             I'm always open to discussing new research problems, reviewing paper drafts, or exploring graduate opportunities.
           </p>
+          <div className="broadsheet-section-divider"></div>
         </div>
 
         <div className="contact-grid">

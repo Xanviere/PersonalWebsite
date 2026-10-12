@@ -1,33 +1,28 @@
 import React from 'react';
-import SpotlightCard from './SpotlightCard';
 import { interests } from '../data';
 
 export default function Interests() {
   if (!interests || interests.length === 0) return null;
   return (
-    <section id="interests" className="section slide-up">
+    <section id="interests" className="section broadsheet-section slide-up">
       <div className="container">
         <div className="section-header-block">
-          <h2 className="section-title">Research Focus & Domains</h2>
+          <h2 className="section-title">Research Focus & Theoretical Domains</h2>
           <p className="section-subtitle-text">
-            Core mathematical fields, algorithmic questions, and dynamical systems I actively investigate.
+            Core mathematical fields, optimization questions, and dynamical systems I actively investigate.
           </p>
+          <div className="broadsheet-section-divider"></div>
         </div>
 
-        <div className="interests-grid">
+        <div className="broadsheet-domains-grid">
           {interests.map((item, index) => (
-            <SpotlightCard 
-              key={index} 
-              className="interest-card"
-            >
-              <div className="interest-card-inner">
-                <div className="interest-header">
-                  <h3 className="interest-title">{item.title}</h3>
-                </div>
-                <div className="interest-subtitle">{item.subtitle}</div>
-                <p className="interest-description">{item.description}</p>
+            <div key={index} className="broadsheet-domain-block">
+              <div className="broadsheet-domain-head">
+                <span className="broadsheet-domain-subtitle">{item.subtitle}</span>
+                <h3 className="broadsheet-domain-title">{item.title}</h3>
               </div>
-            </SpotlightCard>
+              <p className="broadsheet-domain-desc">{item.description}</p>
+            </div>
           ))}
         </div>
       </div>

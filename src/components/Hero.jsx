@@ -3,36 +3,54 @@ import { personalInfo } from '../data';
 
 export default function Hero() {
   return (
-    <section id="about" className="section hero slide-up">
-      <div className="container hero-container">
-        <div className="hero-content">
-          <div className="hero-status-row">
-            <span className="status-live-indicator">
-              <span className="pulse-dot"></span>
-              <span>Prospective PhD Applicant · Seeking Graduate Research Opportunities</span>
-            </span>
+    <section id="about" className="section hero-broadsheet slide-up">
+      <div className="container">
+        <div className="broadsheet-header-kicker">
+          <span className="broadsheet-badge">
+            <span className="pulse-dot"></span>
+            Prospective PhD Applicant · Theoretical ML & Complex Systems
+          </span>
+          <span className="broadsheet-affiliation">{personalInfo.university}</span>
+        </div>
+
+        <div className="broadsheet-hero-main">
+          <h1 className="broadsheet-name">{personalInfo.name}</h1>
+          <p className="broadsheet-tagline">{personalInfo.tagline}</p>
+        </div>
+
+        <div className="broadsheet-bio-rule"></div>
+
+        <div className="broadsheet-hero-grid">
+          <div className="broadsheet-bio-column">
+            <p className="broadsheet-about-text">{personalInfo.about}</p>
           </div>
+          <div className="broadsheet-meta-column">
+            <div className="broadsheet-quick-facts">
+              <div className="fact-item">
+                <span className="fact-label">Focus</span>
+                <span className="fact-value">Stochastic Optimization & Bandits</span>
+              </div>
+              <div className="fact-item">
+                <span className="fact-label">Status</span>
+                <span className="fact-value">3 Peer Manuscripts (1 Published, 2 Under Review)</span>
+              </div>
+              <div className="fact-item">
+                <span className="fact-label">Degree</span>
+                <span className="fact-value">B.Tech CSE (Bioinformatics), GPA 9.1 / 10.0</span>
+              </div>
+            </div>
 
-          <h1 className="hero-title">
-            Hi, I'm <span className="hero-name">{personalInfo.name}</span>.
-          </h1>
-
-          <p className="hero-tagline">
-            {personalInfo.tagline}
-          </p>
-
-          <p className="hero-about">{personalInfo.about}</p>
-
-          <div className="hero-links">
-            <a href="#research" className="btn btn-primary">
-              View Publications
-            </a>
-            <a href={personalInfo.cv} target="_blank" rel="noreferrer" className="btn btn-secondary">
-              Curriculum Vitae (PDF)
-            </a>
-            <a href="#contact" className="btn btn-secondary">
-              Get in Touch
-            </a>
+            <div className="broadsheet-hero-actions">
+              <a href="#research" className="btn btn-primary">
+                View Publications
+              </a>
+              <a href={personalInfo.cv} target="_blank" rel="noreferrer" className="btn btn-secondary">
+                Curriculum Vitae (PDF)
+              </a>
+              <a href="#contact" className="btn btn-secondary">
+                Get in Touch
+              </a>
+            </div>
           </div>
         </div>
       </div>

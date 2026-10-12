@@ -1,62 +1,58 @@
 import React from 'react';
-import SpotlightCard from './SpotlightCard';
 import { research } from '../data';
 
 export default function Research() {
   if (!research || research.length === 0) return null;
   return (
-    <section id="research" className="section slide-up">
+    <section id="research" className="section broadsheet-section slide-up">
       <div className="container">
         <div className="section-header-block">
-          <h2 className="section-title">Research & Publications</h2>
+          <div className="broadsheet-header-split">
+            <h2 className="section-title">Research & Publications</h2>
+            <span className="broadsheet-count-tag">{research.length} Manuscripts</span>
+          </div>
           <p className="section-subtitle-text">
-            Peer-reviewed papers, conference proceedings, and ongoing theoretical investigations.
+            Preprints, peer-reviewed proceedings, and ongoing theoretical investigations.
           </p>
+          <div className="broadsheet-section-divider"></div>
         </div>
 
-        <div className="card-list">
+        <div className="broadsheet-publications-list">
           {research.map(item => {
             const isPublished = item.status && item.status.toLowerCase().includes('published');
             const isUnderReview = item.status && item.status.toLowerCase().includes('review');
 
             return (
-              <SpotlightCard key={item.id} className="research-card">
-                <div className="card-header">
-                  <div className="card-title-group">
-                    {item.status && (
-                      <div className="paper-venue-tag">
-                        <span className={`status-dot ${isPublished ? 'published' : isUnderReview ? 'under-review' : ''}`} />
-                        <span className="venue-status">{item.status}</span>
-                        {item.statusNote && <span className="venue-note">({item.statusNote})</span>}
-                      </div>
-                    )}
-
-                    <h3 className="card-title">
-                      {item.link && item.link !== '#' ? (
-                        <a 
-                          href={item.link} 
-                          target="_blank" 
-                          rel="noreferrer" 
-                          className="paper-title-link"
-                        >
-                          {item.topic || item.title || 'Research Project'}
-                        </a>
-                      ) : (
-                        item.topic || item.title || 'Research Project'
-                      )}
-                    </h3>
-
-                    {item.venue && (
-                      <div className="paper-venue-subtext">
-                        {item.venue}
-                      </div>
-                    )}
+              <article key={item.id} className="broadsheet-paper-entry">
+                <div className="broadsheet-paper-top">
+                  <div className="paper-venue-tag">
+                    <span className={`status-dot ${isPublished ? 'published' : isUnderReview ? 'under-review' : ''}`} />
+                    <span className="venue-status">{item.status}</span>
+                    {item.statusNote && <span className="venue-note">({item.statusNote})</span>}
                   </div>
-
-                  <div className="card-meta">
-                    {item.duration}
-                  </div>
+                  <span className="broadsheet-paper-year">{item.duration}</span>
                 </div>
+
+                <h3 className="broadsheet-paper-title">
+                  {item.link && item.link !== '#' ? (
+                    <a 
+                      href={item.link} 
+                      target="_blank" 
+                      rel="noreferrer" 
+                      className="paper-title-link"
+                    >
+                      {item.topic || item.title || 'Research Project'}
+                    </a>
+                  ) : (
+                    item.topic || item.title || 'Research Project'
+                  )}
+                </h3>
+
+                {item.venue && (
+                  <div className="broadsheet-paper-venue">
+                    {item.venue}
+                  </div>
+                )}
 
                 <div className="paper-collaborators">
                   {item.pi && (
@@ -71,7 +67,7 @@ export default function Research() {
                   )}
                 </div>
 
-                <p className="card-text">{item.description}</p>
+                <p className="broadsheet-paper-description">{item.description}</p>
 
                 {item.tags && item.tags.length > 0 && (
                   <div className="paper-technique-tags">
@@ -112,7 +108,7 @@ export default function Research() {
                     ))}
                   </div>
                 )}
-              </SpotlightCard>
+              </article>
             );
           })}
         </div>
