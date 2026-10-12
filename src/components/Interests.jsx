@@ -10,7 +10,7 @@ export default function Interests() {
         <div className="section-header-block">
           <h2 className="section-title">Research Focus & Domains</h2>
           <p className="section-subtitle-text">
-            Core mathematical fields and biological questions I actively investigate.
+            Core mathematical fields, algorithmic questions, and dynamical systems I actively investigate.
           </p>
         </div>
 
@@ -22,7 +22,6 @@ export default function Interests() {
             >
               <div className="interest-card-inner">
                 <div className="interest-header">
-                  <span className="interest-number">0{index + 1}</span>
                   <h3 className="interest-title">{item.title}</h3>
                 </div>
                 <div className="interest-subtitle">{item.subtitle}</div>

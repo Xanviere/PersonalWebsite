@@ -7,20 +7,25 @@ export default function Achievements() {
   return (
     <section id="achievements" className="section slide-up">
       <div className="container">
-        <h2 className="section-title">Achievements</h2>
-        <div className="achievements-timeline">
-          {achievements.map((item, index) => (
-            <div key={item.id} className="timeline-item">
-              <div className="timeline-marker">
-                <div className="timeline-dot"></div>
-                {index !== achievements.length - 1 && <div className="timeline-line"></div>}
+        <div className="section-header-block">
+          <h2 className="section-title">Honors & Recognition</h2>
+          <p className="section-subtitle-text">
+            Academic scholarships and institutional recognitions.
+          </p>
+        </div>
+
+        <div className="honors-list">
+          {achievements.map((item) => (
+            <SpotlightCard key={item.id} className="honor-card">
+              <div className="honor-header">
+                <div>
+                  <h3 className="card-title honor-title">{item.title}</h3>
+                  <div className="honor-org">{item.organization}</div>
+                </div>
+                <div className="card-meta honor-year">{item.year}</div>
               </div>
-              <SpotlightCard className="timeline-content">
-                <h3 className="card-title">{item.title}</h3>
-                <div className="card-subtitle" style={{ fontFamily: 'var(--font-sans)' }}>{item.organization} • {item.year}</div>
-                <p className="card-text">{item.description}</p>
-              </SpotlightCard>
-            </div>
+              <p className="card-text honor-description">{item.description}</p>
+            </SpotlightCard>
           ))}
         </div>
       </div>

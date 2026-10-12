@@ -30,7 +30,7 @@ export default function Header({ theme, toggleTheme }) {
             <a href="#about">About</a>
             <a href="#education">Education</a>
             <a href="#research">Research</a>
-            <a href="#achievements">Achievements</a>
+            <a href="#achievements">Honors</a>
             <a href="#contact">Contact</a>
           </nav>
 
@@ -87,7 +87,7 @@ export default function Header({ theme, toggleTheme }) {
           <a href="#about" onClick={handleLinkClick}>About</a>
           <a href="#education" onClick={handleLinkClick}>Education</a>
           <a href="#research" onClick={handleLinkClick}>Research</a>
-          <a href="#achievements" onClick={handleLinkClick}>Achievements</a>
+          <a href="#achievements" onClick={handleLinkClick}>Honors</a>
           <a href="#contact" onClick={handleLinkClick}>Contact</a>
         </nav>
       </div>
