@@ -12,15 +12,21 @@ export const personalInfo = {
 
 export const highlights = [
   {
-    badge: "Published",
-    venue: "IEEE INDISCON 2026",
-    title: "Adaptive Security Selection in IoT using LinUCB",
+    badge: "Under Review",
+    venue: "ACL ARR",
+    title: "Robustness of LLM Committees to Byzantine Agents",
     link: "#research"
   },
   {
     badge: "Under Review",
     venue: "TMLR",
     title: "Non-Stationary Constrained Bandits",
+    link: "#research"
+  },
+  {
+    badge: "Published",
+    venue: "IEEE INDISCON 2026",
+    title: "Adaptive Security Selection in IoT using LinUCB",
     link: "#research"
   }
 ];
@@ -39,6 +45,22 @@ export const education = [
 export const research = [
   {
     id: 1,
+    topic: "Robustness of LLM Committees to Static and Trust-Building Byzantine Agents",
+    duration: "Summer 2026 - Fall 2026",
+    pi: "Dr. Kathiravan Srinivasan",
+    coauthors: "Avidha Halder",
+    description: "Investigated multi-agent deliberation committees under application-layer Byzantine insider persuasion across 330 paired counterfactual evaluations per condition on MATH-500, LiveCodeBench, and HumanEval+. Evaluated consensus breakdown against classical distributed fault-tolerance bounds (f < N/3), demonstrating high resilience in frontier reasoning models with native test-time thinking versus severe degradation in standard instruction-tuned panels, and formulated execution-based verifier gates alongside longitudinal Bayesian trust filtering.",
+    status: "Under Review",
+    venue: "Association for Computational Linguistics (ACL Rolling Review)",
+    tags: ["Multi-Agent Deliberation", "Byzantine Fault Tolerance", "LLM Security", "Bayesian Trust Filtering"],
+    link: "https://openreview.net/pdf?id=XsK6jGpir0",
+    links: [
+      { label: "Paper (PDF)", url: "https://openreview.net/pdf?id=XsK6jGpir0", type: "pdf" },
+      { label: "OpenReview Forum", url: "https://openreview.net/forum?id=XsK6jGpir0", type: "external" }
+    ]
+  },
+  {
+    id: 2,
     topic: "On Non-Stationary Constrained Multi-Armed Bandits",
     duration: "Fall 2025 - Present",
     pi: "Dr. Ashish R. Hota",
@@ -54,7 +76,7 @@ export const research = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     topic: "An Adaptive Security Selection Framework for Resource-Constrained IoT Devices Using the LinUCB Algorithm",
     duration: "Winter 2026",
     pi: "Dr. Selvi M",
