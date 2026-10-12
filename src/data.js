@@ -1,8 +1,8 @@
 export const personalInfo = {
   name: "Utkarsh Srivastava",
   title: "Undergraduate Researcher & Prospective PhD Applicant",
-  tagline: "I research theoretical machine learning and sequential decision-making under uncertainty, with applications to complex dynamical and biological systems.",
-  about: "I am an undergraduate researcher at Vellore Institute of Technology focused on theoretical machine learning and sequential decision-making. My work centers on formulating principled algorithms with provable finite-time guarantees—spanning non-stationary & constrained multi-armed bandits, Markov Decision Processes, and dynamical biological networks. I am actively preparing for PhD studies, aiming to develop mathematically rigorous learning frameworks that address fundamental challenges in uncertainty, adaptation, and complex real-world dynamics.",
+  tagline: "Undergraduate researcher interested in theoretical computer science and chasing new, interesting problems.",
+  about: "I am an undergraduate at Vellore Institute of Technology interested in theoretical computer science. My research has primarily focused on multi-armed bandits and sequential decision-making, along with some empirical work on multi-agent LLM systems.\n\nMy primary focus is theoretical CS, but I won't say no to any problem as long as it's genuinely interesting. I am currently preparing for PhD applications.",
   email: "utkarsh.srivastava.1602@gmail.com",
   institutionalEmail: "utkarsh.srivastava2023@vitstudent.ac.in",
   linkedin: "https://www.linkedin.com/in/utkarsh-srivastava-0a88a6219/",

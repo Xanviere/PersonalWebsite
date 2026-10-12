@@ -580,6 +580,9 @@ a:hover {
   color: var(--text-muted);
   line-height: 1.8;
   margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 }
 
 .broadsheet-meta-column {

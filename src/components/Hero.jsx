@@ -8,7 +8,7 @@ export default function Hero() {
         <div className="broadsheet-header-kicker">
           <span className="broadsheet-badge">
             <span className="pulse-dot"></span>
-            Prospective PhD Applicant · Theoretical ML & Complex Systems
+            Prospective PhD Applicant · Theoretical Computer Science
           </span>
           <span className="broadsheet-affiliation">{personalInfo.university}</span>
         </div>
@@ -22,13 +22,17 @@ export default function Hero() {
 
         <div className="broadsheet-hero-grid">
           <div className="broadsheet-bio-column">
-            <p className="broadsheet-about-text">{personalInfo.about}</p>
+            <div className="broadsheet-about-text">
+              {personalInfo.about.split('\n\n').map((paragraph, i) => (
+                <p key={i}>{paragraph}</p>
+              ))}
+            </div>
           </div>
           <div className="broadsheet-meta-column">
             <div className="broadsheet-quick-facts">
               <div className="fact-item">
                 <span className="fact-label">Focus</span>
-                <span className="fact-value">Stochastic Optimization & Bandits</span>
+                <span className="fact-value">Theoretical Computer Science</span>
               </div>
               <div className="fact-item">
                 <span className="fact-label">Status</span>
