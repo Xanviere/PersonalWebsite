@@ -48,14 +48,14 @@ export const research = [
   },
   {
     id: 2,
-    topic: "Robustness of LLM Committees to Static and Trust-Building Byzantine Agents",
-    shortTitle: "Robustness of LLM Committees to Byzantine Agents",
+    topic: "Byzantine-Robust Multi-Agent LLM Consensus",
+    shortTitle: "Byzantine-Robust Multi-Agent LLM Consensus",
     shortVenue: "ACL ARR",
     duration: "2026",
     authors: [
       { name: "Utkarsh Srivastava", isSelf: true },
       { name: "Avidha Halder" },
-      { name: "Kathiravan Srinivasan" }
+      { name: "Kathiravan S." }
     ],
     description: "Investigated multi-agent deliberation committees under application-layer Byzantine insider persuasion across 330 paired counterfactual evaluations per condition on MATH-500, LiveCodeBench, and HumanEval+. Evaluated consensus breakdown against classical distributed fault-tolerance thresholds (f < N/3), contrasting frontier reasoning models with standard instruction-tuned panels, and formulated execution-based verifier gates alongside longitudinal Bayesian trust filtering.",
     status: "Under Review",
