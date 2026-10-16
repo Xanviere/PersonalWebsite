@@ -1,5 +1,5 @@
 import React from 'react';
-import { personalInfo } from '../data';
+import { personalInfo, research } from '../data';
 
 export default function Hero() {
   return (
@@ -7,8 +7,7 @@ export default function Hero() {
       <div className="container">
         <div className="broadsheet-header-kicker">
           <span className="broadsheet-badge">
-            <span className="pulse-dot"></span>
-            Prospective PhD Applicant · Theoretical Computer Science
+            {personalInfo.title}
           </span>
           <span className="broadsheet-affiliation">{personalInfo.university}</span>
         </div>
@@ -27,33 +26,54 @@ export default function Hero() {
                 <p key={i}>{paragraph}</p>
               ))}
             </div>
-          </div>
-          <div className="broadsheet-meta-column">
-            <div className="broadsheet-quick-facts">
-              <div className="fact-item">
-                <span className="fact-label">Focus</span>
-                <span className="fact-value">Theoretical Computer Science</span>
-              </div>
-              <div className="fact-item">
-                <span className="fact-label">Status</span>
-                <span className="fact-value">3 Peer Manuscripts (1 Published, 2 Under Review)</span>
-              </div>
-              <div className="fact-item">
-                <span className="fact-label">Degree</span>
-                <span className="fact-value">B.Tech CSE (Bioinformatics), GPA 9.1 / 10.0</span>
-              </div>
-            </div>
 
             <div className="broadsheet-hero-actions">
-              <a href="#research" className="btn btn-primary">
-                View Publications
-              </a>
-              <a href={personalInfo.cv} target="_blank" rel="noreferrer" className="btn btn-secondary">
+              <a href={personalInfo.cv} target="_blank" rel="noreferrer" className="btn btn-primary">
                 Curriculum Vitae (PDF)
               </a>
-              <a href="#contact" className="btn btn-secondary">
-                Get in Touch
+              <a href="#research" className="btn btn-secondary">
+                Research & Preprints
               </a>
+              <a href={`mailto:${personalInfo.email}`} className="btn btn-secondary">
+                {personalInfo.email}
+              </a>
+            </div>
+          </div>
+
+          <div className="broadsheet-meta-column">
+            <div className="broadsheet-quick-facts">
+              <div className="quick-facts-heading">Selected Preprints & Work</div>
+              {research.map((paper) => (
+                <div key={paper.id} className="fact-item">
+                  <div className="fact-meta-line">
+                    <span className="fact-venue-pill">{paper.shortVenue}</span>
+                    <span className="fact-status-text">
+                      {paper.statusNote ? 'Rebuttal Stage' : paper.status}
+                    </span>
+                  </div>
+                  <a
+                    href={paper.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="fact-paper-title"
+                  >
+                    {paper.shortTitle || paper.topic}
+                  </a>
+                  <div className="fact-inline-links">
+                    {paper.links.map((l, idx) => (
+                      <a
+                        key={idx}
+                        href={l.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="fact-mini-link"
+                      >
+                        [{l.type === 'pdf' ? 'PDF' : 'OpenReview'}]
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

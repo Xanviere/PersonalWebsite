@@ -7,7 +7,7 @@ export default function Education() {
     <section id="education" className="section broadsheet-section slide-up">
       <div className="container">
         <div className="section-header-block">
-          <h2 className="section-title">Education</h2>
+          <h2 className="section-title">Education & Honors</h2>
           <div className="broadsheet-section-divider"></div>
         </div>
 
@@ -23,12 +23,19 @@ export default function Education() {
                   <span className="broadsheet-year">{edu.duration}</span>
                   {edu.gpa && (
                     <span className="broadsheet-gpa-badge">
-                      GPA {edu.gpa}
+                      CGPA {edu.gpa}
+                    </span>
+                  )}
+                  {edu.rank && (
+                    <span className="broadsheet-gpa-badge">
+                      {edu.rank}
                     </span>
                   )}
                 </div>
               </div>
-              <p className="broadsheet-entry-body">{edu.details}</p>
+              {edu.honors && (
+                <p className="broadsheet-entry-body">{edu.honors}</p>
+              )}
             </div>
           ))}
         </div>

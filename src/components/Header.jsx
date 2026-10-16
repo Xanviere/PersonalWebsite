@@ -4,7 +4,6 @@ import { personalInfo } from '../data';
 export default function Header({ theme, toggleTheme }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Close menu when pressing Escape key
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') setIsMenuOpen(false);
@@ -24,14 +23,13 @@ export default function Header({ theme, toggleTheme }) {
           {personalInfo.name}
         </a>
 
-        {/* Desktop Navigation */}
         <div className="header-actions">
           <nav className="nav desktop-nav">
             <a href="#about">About</a>
-            <a href="#education">Education</a>
             <a href="#research">Research</a>
-            <a href="#achievements">Honors</a>
+            <a href="#education">Education</a>
             <a href="#contact">Contact</a>
+            <a href={personalInfo.cv} target="_blank" rel="noreferrer">CV (PDF)</a>
           </nav>
 
           <button 
@@ -58,7 +56,6 @@ export default function Header({ theme, toggleTheme }) {
             )}
           </button>
 
-          {/* Mobile Hamburger Toggle */}
           <button
             className="mobile-menu-btn"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -81,18 +78,16 @@ export default function Header({ theme, toggleTheme }) {
         </div>
       </div>
 
-      {/* Mobile Navigation Drawer / Dropdown */}
       <div className={`mobile-nav-drawer ${isMenuOpen ? 'open' : ''}`}>
         <nav className="mobile-nav-links">
           <a href="#about" onClick={handleLinkClick}>About</a>
-          <a href="#education" onClick={handleLinkClick}>Education</a>
           <a href="#research" onClick={handleLinkClick}>Research</a>
-          <a href="#achievements" onClick={handleLinkClick}>Honors</a>
+          <a href="#education" onClick={handleLinkClick}>Education</a>
           <a href="#contact" onClick={handleLinkClick}>Contact</a>
+          <a href={personalInfo.cv} target="_blank" rel="noreferrer" onClick={handleLinkClick}>CV (PDF)</a>
         </nav>
       </div>
 
-      {/* Backdrop overlay for mobile drawer */}
       {isMenuOpen && (
         <div 
           className="mobile-backdrop" 

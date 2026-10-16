@@ -1,20 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Education from './components/Education';
 import Research from './components/Research';
-import Achievements from './components/Achievements';
-import Interests from './components/Interests';
+import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-
 import AnimatedBackground from './components/AnimatedBackground';
 
 function App() {
   const [theme, setTheme] = useState('light');
 
   useEffect(() => {
-    // Check system preference or local storage on load (default to dark if preferred)
     const saved = localStorage.getItem('theme');
     if (saved) {
       setTheme(saved);
@@ -41,10 +37,8 @@ function App() {
         <Header theme={theme} toggleTheme={toggleTheme} />
         <main>
           <Hero />
-          <Education />
           <Research />
-          <Achievements />
-          <Interests />
+          <Education />
           <Contact />
         </main>
         <Footer />
