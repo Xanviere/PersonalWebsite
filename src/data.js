@@ -6,7 +6,7 @@ export const personalInfo = {
   email: "utkarsh.srivastava.1602@gmail.com",
   institutionalEmail: "utkarsh.srivastava2023@vitstudent.ac.in",
   linkedin: "https://www.linkedin.com/in/utkarsh-srivastava-0a88a6219/",
-  github: "https://github.com/Xanviere",
+  github: "/github",
   orcid: "https://orcid.org/0009-0000-7044-8781",
   cv: "/resume.pdf",
   university: "Vellore Institute of Technology"
@@ -64,8 +64,7 @@ export const research = [
     link: "/papers/byzantine-persuasion-sleeper-agents.pdf",
     links: [
       { label: "Paper (PDF)", url: "/papers/byzantine-persuasion-sleeper-agents.pdf", type: "pdf" },
-      { label: "OpenReview Forum", url: "https://openreview.net/forum?id=XsK6jGpir0", type: "external" },
-      { label: "Code (GitHub)", url: "https://github.com/Xanviere/Robustness-of-LLM-Committees-to-Static-and-Trust-Building-Byzantine-Agents", type: "external" }
+      { label: "Code (GitHub)", url: "/github?repo=Robustness-of-LLM-Committees-to-Static-and-Trust-Building-Byzantine-Agents", type: "external" }
     ]
   },
   {
