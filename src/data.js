@@ -48,23 +48,24 @@ export const research = [
   },
   {
     id: 2,
-    topic: "Byzantine-Robust Multi-Agent LLM Consensus",
-    shortTitle: "Byzantine-Robust Multi-Agent LLM Consensus",
-    shortVenue: "ACL ARR",
+    topic: "Robustness of LLM Committees to Byzantine Persuasion and Sleeper Agents",
+    shortTitle: "Robustness of LLM Committees to Byzantine Persuasion and Sleeper Agents",
+    shortVenue: "IEEE OJ-CS",
     duration: "2026",
     authors: [
       { name: "Utkarsh Srivastava", isSelf: true },
       { name: "Avidha Halder" },
-      { name: "Kathiravan S." }
+      { name: "Kathiravan Srinivasan" }
     ],
-    description: "Investigated multi-agent deliberation committees under application-layer Byzantine insider persuasion across 330 paired counterfactual evaluations per condition on MATH-500, LiveCodeBench, and HumanEval+. Evaluated consensus breakdown against classical distributed fault-tolerance thresholds (f < N/3), contrasting frontier reasoning models with standard instruction-tuned panels, and formulated execution-based verifier gates alongside longitudinal Bayesian trust filtering.",
+    description: "Investigated multi-agent deliberation committees' vulnerability to application-layer Byzantine insider persuasion and sleeper defectors across paired benchmark evaluations on MATH-500, LiveCodeBench, and HumanEval+. Formalized a causal counterfactual branching framework (AAE = AER - CCR) on frozen Round 0 anchors, demonstrating that native test-time reasoning buffers models against deceptive rhetoric, while standard instruction-tuned panels suffer acute susceptibility. Evaluated multi-attacker collusion dynamics, pre-consensus execution-verifier gates, and longitudinal Bayesian trust filtering.",
     status: "Under Review",
-    venue: "Association for Computational Linguistics (ACL Rolling Review)",
-    tags: ["Multi-Agent Deliberation", "Byzantine Fault Tolerance", "Bayesian Trust Filtering"],
-    link: "https://openreview.net/pdf?id=XsK6jGpir0",
+    venue: "IEEE Open Journal of the Computer Society (OJ-CS)",
+    tags: ["Byzantine Fault Tolerance", "Multi-Agent Deliberation", "Persuasion Attacks", "Bayesian Trust Filtering"],
+    link: "/papers/byzantine-persuasion-sleeper-agents.pdf",
     links: [
-      { label: "Paper (PDF)", url: "https://openreview.net/pdf?id=XsK6jGpir0", type: "pdf" },
-      { label: "OpenReview Forum", url: "https://openreview.net/forum?id=XsK6jGpir0", type: "external" }
+      { label: "Paper (PDF)", url: "/papers/byzantine-persuasion-sleeper-agents.pdf", type: "pdf" },
+      { label: "OpenReview Forum", url: "https://openreview.net/forum?id=XsK6jGpir0", type: "external" },
+      { label: "Code (GitHub)", url: "https://github.com/Xanviere/Robustness-of-LLM-Committees-to-Static-and-Trust-Building-Byzantine-Agents", type: "external" }
     ]
   },
   {

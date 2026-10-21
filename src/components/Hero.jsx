@@ -68,7 +68,7 @@ export default function Hero() {
                         rel="noreferrer"
                         className="fact-mini-link"
                       >
-                        [{l.type === 'pdf' ? 'PDF' : 'OpenReview'}]
+                        [{l.type === 'pdf' ? 'PDF' : l.label.includes('Code') ? 'Code' : 'OpenReview'}]
                       </a>
                     ))}
                   </div>
