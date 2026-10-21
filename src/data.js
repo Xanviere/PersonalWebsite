@@ -19,8 +19,8 @@ export const education = [
     institution: "Vellore Institute of Technology, Vellore",
     duration: "2023 – 2027",
     gpa: "9.1 / 10.0",
-    rank: "Rank 6 / 150",
-    honors: "Recipient of the VIT Merit Scholarship (2025–2026) for academic excellence, ranking 6th out of 150 in the cohort."
+    rank: "Rank 6 / 148",
+    honors: "Recipient of the VIT Merit Scholarship (2025–2026) for academic excellence, ranking 6th out of 148 in the cohort."
   }
 ];
 
