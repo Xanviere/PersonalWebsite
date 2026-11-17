@@ -67,3 +67,14 @@ export const research = [
     ]
   }
 ];
+
+export const ongoingProjects = [
+  {
+    id: 1,
+    title: "Stochastic Modeling of Synaptic Vesicle Release",
+    duration: "Jul. 2026 – Present",
+    advisor: "Dr. Abhyudai Singh",
+    domain: "Stochastic Systems · Reaction-Diffusion Modeling",
+    description: "Built 3D particle-based reaction-diffusion models in MCell with explicit Ca²⁺ influx, mobile endogenous buffers, and extrusion pumps, matching analytical mean quantal content and Fano factor trajectories across 10,000 Monte Carlo trials. Simulated active-zone spatial topologies—including multi-cluster cores, outer vesicle halo rings, and stratified buffer shells—to identify nanoscale geometries reproducing experimental Fano factor peaks and 25× release scaling."
+  }
+];

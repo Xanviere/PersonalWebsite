@@ -136,10 +136,10 @@ a:hover {
 }
 
 .hero { animation-delay: 0.1s; }
-#education { animation-delay: 0.2s; }
-#research { animation-delay: 0.3s; }
-#achievements { animation-delay: 0.4s; }
-#interests { animation-delay: 0.5s; }
+#research { animation-delay: 0.2s; }
+#projects { animation-delay: 0.25s; }
+#education { animation-delay: 0.3s; }
+#contact { animation-delay: 0.35s; }
 
 @keyframes slideUpFade {
   from {

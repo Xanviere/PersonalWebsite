@@ -27,6 +27,7 @@ export default function Header({ theme, toggleTheme }) {
           <nav className="nav desktop-nav">
             <a href="#about">About</a>
             <a href="#research">Research</a>
+            <a href="#projects">Projects</a>
             <a href="#education">Education</a>
             <a href="#contact">Contact</a>
             <a href={personalInfo.cv} target="_blank" rel="noreferrer">CV (PDF)</a>
@@ -82,6 +83,7 @@ export default function Header({ theme, toggleTheme }) {
         <nav className="mobile-nav-links">
           <a href="#about" onClick={handleLinkClick}>About</a>
           <a href="#research" onClick={handleLinkClick}>Research</a>
+          <a href="#projects" onClick={handleLinkClick}>Projects</a>
           <a href="#education" onClick={handleLinkClick}>Education</a>
           <a href="#contact" onClick={handleLinkClick}>Contact</a>
           <a href={personalInfo.cv} target="_blank" rel="noreferrer" onClick={handleLinkClick}>CV (PDF)</a>
