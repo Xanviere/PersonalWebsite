@@ -27,27 +27,6 @@ export const education = [
 export const research = [
   {
     id: 1,
-    topic: "On Non-Stationary Constrained Multi-Armed Bandits",
-    shortTitle: "On Non-Stationary Constrained Multi-Armed Bandits",
-    shortVenue: "TMLR",
-    duration: "2025 – 2026",
-    authors: [
-      { name: "Utkarsh Srivastava", isSelf: true },
-      { name: "Ashish R. Hota", affiliation: "IIT Kharagpur" }
-    ],
-    description: "Formulated two adaptive variants of the Constraint Lower Confidence Bound algorithm—sliding-window (SW-CON-LCB) and exponentially discounted (D-CON-LCB)—for piecewise-stationary environments with abrupt shifts in reward and constraint distributions. Derived finite-time theoretical upper bounds on expected suboptimal and infeasible arm selections, proving O(T^((1+v)/2)) regret growth under O(T^v) breakpoints, and validated the guarantees on clinical antimicrobial resistance (AMR) datasets.",
-    status: "Under Review",
-    statusNote: "3 reviews received · Rebuttals submitted",
-    venue: "Transactions on Machine Learning Research (TMLR)",
-    tags: ["Constrained Bandits", "Non-Stationary Environments", "Finite-Time Regret Bounds"],
-    link: "https://openreview.net/pdf?id=Hi6Jwtya6x",
-    links: [
-      { label: "Paper (PDF)", url: "https://openreview.net/pdf?id=Hi6Jwtya6x", type: "pdf" },
-      { label: "OpenReview Forum", url: "https://openreview.net/forum?id=Hi6Jwtya6x", type: "external" }
-    ]
-  },
-  {
-    id: 2,
     topic: "Robustness of LLM Committees to Byzantine Persuasion and Sleeper Agents",
     shortTitle: "Robustness of LLM Committees to Byzantine Persuasion and Sleeper Agents",
     shortVenue: "IEEE OJ-CS",
@@ -68,7 +47,7 @@ export const research = [
     ]
   },
   {
-    id: 3,
+    id: 2,
     topic: "An Adaptive Security Selection Framework for Resource-Constrained IoT Devices Using the LinUCB Algorithm",
     shortTitle: "Adaptive Security Selection in IoT via LinUCB",
     shortVenue: "IEEE INDISCON 2026",
