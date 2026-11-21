@@ -6,6 +6,7 @@ import OngoingProjects from './components/OngoingProjects';
 import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import AnimatedBackground from './components/AnimatedBackground';
 
 function App() {
   const [theme, setTheme] = useState('light');
@@ -29,17 +30,20 @@ function App() {
   };
 
   return (
-    <div className="app-container">
-      <Header theme={theme} toggleTheme={toggleTheme} />
-      <main>
-        <Hero />
-        <Research />
-        <OngoingProjects />
-        <Education />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <>
+      <AnimatedBackground theme={theme} />
+      <div className="app-container">
+        <Header theme={theme} toggleTheme={toggleTheme} />
+        <main>
+          <Hero />
+          <Research />
+          <OngoingProjects />
+          <Education />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 }
 
