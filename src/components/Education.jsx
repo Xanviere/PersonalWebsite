@@ -1,43 +1,46 @@
 import React from 'react';
 import { education } from '../data';
 
+/**
+ * Monograph-style two-column listing of academic degrees and honors.
+ */
 export default function Education() {
   if (!education || education.length === 0) return null;
-  return (
-    <section id="education" className="section broadsheet-section slide-up">
-      <div className="container">
-        <div className="section-header-block">
-          <h2 className="section-title">Education & Honors</h2>
-          <div className="broadsheet-section-divider"></div>
-        </div>
 
-        <div className="broadsheet-academic-list">
-          {education.map(edu => (
-            <div key={edu.id} className="broadsheet-entry">
-              <div className="broadsheet-entry-header">
-                <div>
-                  <h3 className="broadsheet-entry-title">{edu.degree}</h3>
-                  <div className="broadsheet-entry-sub">{edu.institution}</div>
-                </div>
-                <div className="broadsheet-entry-meta">
-                  <span className="broadsheet-year">{edu.duration}</span>
-                  {edu.gpa && (
-                    <span className="broadsheet-gpa-badge">
-                      CGPA {edu.gpa}
-                    </span>
-                  )}
-                  {edu.rank && (
-                    <span className="broadsheet-gpa-badge">
-                      {edu.rank}
-                    </span>
-                  )}
-                </div>
-              </div>
-              {edu.honors && (
-                <p className="broadsheet-entry-body">{edu.honors}</p>
-              )}
+  return (
+    <section id="education" className="section">
+      <div className="container">
+        <div className="monograph-section-grid">
+          <div className="monograph-rail">
+            <h2 className="section-title">Education & Honors</h2>
+          </div>
+
+          <div className="monograph-content">
+            <div className="monograph-list">
+              {education.map(edu => {
+                const metaParts = [edu.duration];
+                if (edu.gpa) metaParts.push(`CGPA ${edu.gpa}`);
+                if (edu.rank) metaParts.push(edu.rank);
+
+                return (
+                  <div key={edu.id} className="entry-item">
+                    <div className="entry-header">
+                      <div>
+                        <h3 className="entry-title">{edu.degree}</h3>
+                        <div className="entry-sub">{edu.institution}</div>
+                      </div>
+                      <span className="entry-duration tabular-meta">
+                        {metaParts.filter(Boolean).join(' · ')}
+                      </span>
+                    </div>
+                    {edu.honors && (
+                      <p className="entry-body">{edu.honors}</p>
+                    )}
+                  </div>
+                );
+              })}
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>

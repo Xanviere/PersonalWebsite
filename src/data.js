@@ -35,7 +35,7 @@ export const research = [
       { name: "Utkarsh Srivastava", isSelf: true },
       { name: "Ashish R. Hota", affiliation: "IIT Kharagpur" }
     ],
-    description: "Formulated two adaptive variants of the Constraint Lower Confidence Bound algorithm—sliding-window (SW-CON-LCB) and exponentially discounted (D-CON-LCB)—for piecewise-stationary environments with abrupt shifts in reward and constraint distributions. Derived finite-time theoretical upper bounds on expected suboptimal and infeasible arm selections, proving O(T^((1+v)/2)) regret growth under O(T^v) breakpoints, and validated the guarantees on clinical antimicrobial resistance (AMR) datasets.",
+    description: "Formulated two adaptive variants of the Constraint Lower Confidence Bound algorithm, sliding-window (SW-CON-LCB) and exponentially discounted (D-CON-LCB), for piecewise-stationary environments with abrupt shifts in reward and constraint distributions. Derived finite-time theoretical upper bounds on expected suboptimal and infeasible arm selections, proving O(T^{(1+ν)/2}) regret growth under O(T^ν) breakpoints, and validated the guarantees on clinical antimicrobial resistance (AMR) datasets.",
     status: "Under Review",
     statusNote: "3 reviews received · Rebuttals submitted",
     venue: "Transactions on Machine Learning Research (TMLR)",
@@ -96,6 +96,6 @@ export const ongoingProjects = [
     duration: "Jul. 2026 – Present",
     advisor: "Dr. Abhyudai Singh",
     domain: "Stochastic Systems · Reaction-Diffusion Modeling",
-    description: "Built 3D particle-based reaction-diffusion models in MCell with explicit Ca²⁺ influx, mobile endogenous buffers, and extrusion pumps, matching analytical mean quantal content and Fano factor trajectories across 10,000 Monte Carlo trials. Simulated active-zone spatial topologies—including multi-cluster cores, outer vesicle halo rings, and stratified buffer shells—to identify nanoscale geometries reproducing experimental Fano factor peaks and 25× release scaling."
+    description: "Built 3D particle-based reaction-diffusion models in MCell with explicit Ca²⁺ influx, mobile endogenous buffers, and extrusion pumps, matching analytical mean quantal content and Fano factor trajectories across 10,000 Monte Carlo trials. Simulated active-zone spatial topologies (multi-cluster cores, outer vesicle halo rings, and stratified buffer shells) to identify nanoscale geometries reproducing experimental Fano factor peaks and 25× release scaling."
   }
 ];
