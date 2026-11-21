@@ -45,7 +45,7 @@ export default function Hero() {
             <dl className="masthead-dl">
               <div className="masthead-dl-row">
                 <dt>Research Focus</dt>
-                <dd>Online Learning (Multi-Armed Bandits, MDPs), Stochastic Optimization, Distributed Consensus</dd>
+                <dd>Online Learning (Multi-Armed Bandits, MDPs), Stochastic Optimization, Systems & Computational Biology</dd>
               </div>
               <div className="masthead-dl-row">
                 <dt>Degree</dt>

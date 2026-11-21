@@ -1,8 +1,6 @@
 :root {
   /* Crisp academic monograph palette in OKLCH */
   --bg: oklch(0.988 0.002 255);
-  --bg-outer: oklch(0.962 0.007 258);
-  --bg-sheet: oklch(0.99 0.002 255 / 0.84);
   --surface: oklch(0.968 0.004 255);
   --border: oklch(0.89 0.006 255);
   --border-strong: oklch(0.76 0.01 255);
@@ -21,8 +19,6 @@
 
 [data-theme="dark"] {
   --bg: oklch(0.145 0.01 255);
-  --bg-outer: oklch(0.118 0.012 258);
-  --bg-sheet: oklch(0.148 0.01 255 / 0.84);
   --surface: oklch(0.185 0.012 255);
   --border: oklch(0.28 0.012 255);
   --border-strong: oklch(0.42 0.016 255);
@@ -52,7 +48,7 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--bg-outer);
+  background-color: var(--bg);
   color: var(--text-body);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
@@ -66,12 +62,8 @@ body {
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
   min-height: 100vh;
-  background-color: var(--bg-sheet);
-  border-left: 1px solid var(--border);
-  border-right: 1px solid var(--border);
+  background: transparent;
 }
 
 ::selection {
@@ -259,7 +251,9 @@ button:focus-visible {
   color: var(--text-body);
   line-height: 1.72;
   max-width: 65ch;
-  text-wrap: pretty;
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .masthead-actions {
@@ -458,7 +452,9 @@ button:focus-visible {
   color: var(--text-body);
   line-height: 1.68;
   max-width: 68ch;
-  text-wrap: pretty;
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
   margin-top: 0.2rem;
 }
 
@@ -555,7 +551,9 @@ button:focus-visible {
   color: var(--text-body);
   line-height: 1.68;
   max-width: 68ch;
-  text-wrap: pretty;
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 /* Contact & Links */
@@ -686,13 +684,6 @@ button:focus-visible {
 }
 
 /* Responsive Breakpoints */
-@media (max-width: 1000px) {
-  .app-container {
-    border-left: none;
-    border-right: none;
-  }
-}
-
 @media (max-width: 768px) {
   .desktop-nav {
     display: none;
